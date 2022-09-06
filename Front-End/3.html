@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+<div>
+  <ul>
+    <li>
+      <a>Один</a>
+        <ul class="sub">
+            <li>Четыре</li>
+            <li>Пять</li>
+            <li>Шесть</li>
+        </ul>
+    </li>
+    <li>
+      <a>Два</a>
+    </li>
+    <li>
+      <a>Три</a>
+    </li>
+  </ul>
+</div>
+</body>
+<style>
+  div{
+    float: left;
+    width: 100%;
+    position: relative;
+    height: 50px;
+    background-color: #89d2b1;
+  }
+  ul{
+    float: left;
+    position: relative;
+    left: 50%;
+    display: block;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  li{
+    height: auto;
+    margin: 15px 10px;
+    display: block;
+    position: relative;
+    right: 50%;
+    border: 1px solid black;
+    text-decoration: none;
+    float:left;
+    padding: 0;
+  }
+  a{
+    padding: 0 10px;
+    cursor: pointer;
+    text-decoration: none;
+  }
+  .sub{
+      left :0;
+      opacity:0;
+      margin-top: 1px;
+      position: absolute;
+      background-color: #629fbe;
+      transition: .5s linear;
+  }
+  .sub > li{
+      cursor: pointer;
+      border: none;
+      right: 0;
+  }
+  li:hover > .sub{
+      opacity:1;
+  }
+</style>
+</html>

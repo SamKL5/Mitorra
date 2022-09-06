@@ -1,0 +1,13 @@
+1) SELECT `property`.`name`, `property_value`.`value`
+FROM `property_value`
+JOIN `product` ON(`product`.`id`=`property_value`.`product_id`)
+JOIN `property` ON(`property`.`id`=`property_value`.`property_id`)
+WHERE `product`.`id` = $id;
+
+2) SELECT `category`.`name`,`property`.`name`
+FROM `category`
+JOIN `product` ON(`product`.`category_id`=`category`.`id`)
+JOIN `property_value` ON(`property_value`.`product_id`=`product`.`id`)
+JOIN `property` ON(`property_value`.`property_id`=`property`.`id`)
+WHERE `category`.`name` = $name
+GROUP BY `property_value`.`property_id` HAVING COUNT(`product`.`id`)=1;

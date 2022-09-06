@@ -29,7 +29,7 @@ PHP
 
 SQL
 
-9)  В базе данных есть:
+9) В базе данных есть:
  таблица категорий товаров category (id, name) , 
  таблица товаров product (id,category_id,name,price),
  таблица свойств property (id,name) 
